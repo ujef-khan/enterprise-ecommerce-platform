@@ -1,0 +1,35 @@
+{
+  "name": "enterprise-ecommerce-platform",
+  "version": "1.0.0",
+  "description": "Full-stack enterprise e-commerce platform with React, Node.js, and advanced features",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "npm run start:backend",
+    "start:frontend": "cd frontend && npm run preview",
+    "start:backend": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "setup": "chmod +x scripts/setup.sh && ./scripts/setup.sh",
+    "seed": "cd backend && node scripts/seed-data.js",
+    "deploy": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh"
+  },
+  "keywords": [
+    "ecommerce",
+    "react",
+    "nodejs",
+    "typescript",
+    "tailwind",
+    "mongodb",
+    "stripe",
+    "razorpay"
+  ],
+  "author": "Enterprise E-commerce Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
